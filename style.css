@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 30px;
+    padding-left: 30px;
+    gap: 10px 15px;
+
+    
+}
+
+.button-header {
+    display: flex;
+    gap: 15px;
+}
+
+.button {
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+.button:hover {
+    border-bottom: 2px solid white;
+    transition: 0.4s;
+}
+
+.logo-header {
+    width: 180px;
+    min-height: 50px;
+
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.descripition {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 100px;
+    
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "main-content aside-content";
+    padding: 20px;
+    flex: 1 0 auto;
+
+}
+
+.main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.strarters {
+    width: 250px;
+    height: 350px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.strarters:hover {
+    transform: scale(1.2);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    grid-area: "main-content";
+}
+
+.aside-content {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    grid-area: "aside-content";
+    gap: 30px;
+
+
+}
+
+.lendarios {
+    width: 75%;
+    cursor: pointer;
+}
+
+.lendarios:hover{
+    transform: scale(1.2);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.aside-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.aside-title {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+.aside-name {
+    font-size: 20px;
+    text-align: center;
+}
+
+#footer {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-right: 30px;
+    padding-left: 30px;
+    gap: 10px 15px;
+}
+
+.logo-footer {
+    width: 180px;
+    min-height: 50px;
+
+}
+
+a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 2560px) and (min-width:1814px){
+    .main-content {
+        display: flex;        
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+
+    }
+
+
+
+}
+
+@media (max-width: 630px) {
+    .grid-container {
+      grid-template-areas:
+        "main-content"
+        "aside-content";
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .aside-content{
+        min-width: auto;
+    }
+
+ 
+}
+
+
+
+@media (max-width: 450px) and (min-width: 325px){
+    #footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+}
+
+@media (max-width: 450px) {
+    #header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+
+@media (max-width:324px) {
+    #footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
